@@ -1,0 +1,60 @@
+﻿@model CheapShop.Models.Category
+
+@{
+    ViewBag.Title = "Quản lý danh mục loại mặt hàng";
+}
+@section pluginStyles{
+    <link href="~/Content/plugins/iCheck/custom.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Cập nhật nhóm mặt hàng mới</h5>
+            </div>
+
+            <div class="ibox-content p-sm">
+                @using (Html.BeginForm("Edit", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+
+                    <div class="form-horizontal">
+                        @(Html.ValidationSummary(true, "", new { @class = "text-danger" }))
+
+                        @Html.HiddenFor(model => model.CategoryId)
+                        @Html.HiddenFor(model => model.RowVersion)
+
+                        @Html.Partial("_CreateOrEdit", Model)
+                        @Html.Partial("_ToolbarPartial")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/admjqueryval")
+    <script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+
+    <script type="text/javascript">
+        var lastNameValue = '';
+        $(document).ready(function () {
+            $('#categoryName').on('change keyup paste mouseup', function () {
+                var cateName = $('#CategoryName').val();
+                if (cateName != lastNameValue) {
+                    $('#Alias').val(convertToUnsignChar(cateName));
+                    lastNameValue = cateName;
+                }
+            });
+
+            //Thay thế checkbox bình thường bởi checkbox đẹp hơn
+            $('.i-checks').isCheck({
+                checkboxClass: 'icheckbox_square-green'
+            });
+        });
+    </script>
+
+}

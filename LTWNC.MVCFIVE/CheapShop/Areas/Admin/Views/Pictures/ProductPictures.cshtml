@@ -1,0 +1,52 @@
+﻿@model PagedList.IPagedList<Picture>
+
+@{
+    Layout = null;
+}
+
+@if (Model.Count > 0)
+{
+    <div style="margin: 0 auto !important">
+        <div class="ibox float-e-margins">
+            <div class="carousel slide" id="carousel2">
+                <ol class="carousel-indicators">
+                    <li data-slide-to="0" data-target="#carousel2" class=""></li>
+                    <li class="active" data-slide-to="1" data-target="#carousel2"></li>
+                    <li data-slide-to="2" data-target="#carousel2" class=""></li>
+                </ol>
+                <div class="carousel-inner">
+
+                    @foreach (var pt in Model)
+                    {
+                        var active = pt == Model[0] ? "active" : "";
+
+                        <div class="item @active" style="height: 400px;">
+                            <img src="@Url.Content(pt.Path)" alt="" width="100%" />
+                            <div class="carousel-caption">
+                                <p>@pt.Caption</p>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <a data-slide="prev" href="#carousel2" class="left carousel-control">
+                    <span class="icon-prev"></span>
+                </a>
+                <a data-slide="next" href="#carousel2" class="right carousel-control">
+                    <span class="icon-next"></span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--Phần nội dung-->
+    @Html.Partial("_PictureList", @Model)
+}
+
+@if (Model.Count == 0)
+{
+    <tr>
+        <td colspan="6" class="text-center text-info font-bold">Không tìm thấy hình nào</td>
+    </tr>
+}
+
+

@@ -1,0 +1,98 @@
+﻿@model Product
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Tên SP:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Name</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Tên khác:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Alias</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Ảnh Thumbnail:</strong>
+    </div>
+    <div class="col-sm-10">
+        <img src="@Url.Content(Model.Thumbnail)" width="400" height="400" />
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Số hiệu SP:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.ProductCode</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Giới thiệu:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.ShortIntro</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Mô tả:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Description</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Đơn vị:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.QtyPerUnit</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Giá:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Price</p>
+    </div>
+</div>
+
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Số lượng:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Quantity</p>
+    </div>
+</div>
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Đã xóa:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.Actived</p>
+    </div>
+</div>
+<div class="row border-bottom">
+    <div class="col-sm-2">
+        <strong>Nhà Cung Cấp:</strong>
+    </div>
+    <div class="col-sm-10">
+        <p>@Model.SupplierId</p>
+    </div>
+</div>

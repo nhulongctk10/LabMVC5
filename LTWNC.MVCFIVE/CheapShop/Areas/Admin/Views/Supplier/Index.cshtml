@@ -1,0 +1,208 @@
+﻿@model PagedList.IPagedList<Supplier>
+
+@{
+    ViewBag.Title = "Quản lý nhà cung cấp";
+}
+
+@section pluginStyles
+{
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Content/AdmGrid.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Danh sách nhà cung cấp</h5>
+                <div class="ibox-tools">
+
+                    @(Html.Bootstrap()
+                          .ActionLink("Thêm công ty mới", "Create")
+                          .Class("btn btn-primary btn-xs")
+                          .AppendIcon("fa fa-plus"))
+                </div>
+            </div>
+
+            <div class="ibox-content p-sm">
+                <!--Phan hien thi form tim kiem-->
+                <div class="row">
+                    <div class="col-md-6 m-b-sm">
+                        @using (Html.BeginForm("Index", "Supplier", FormMethod.Get, new { @class = "form-horizontal", role = "search", id = "searchSupplier" }))
+                        {
+                            <div class="row">
+                                <div class="col-md-3">
+                                    Trạng thái:  @(Html.CheckBox("status", new { id = "status" }))
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="input-group">
+                                        @(Html.TextBox("Keyword", null, new { placeholder = "Nhập tên công ty hoặc thông tin liên lạc khác", @class = "input-sm form-control" }))
+
+                                        @(Html.Hidden("PageSize", null, new { id = "pageSize" }))
+
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn btn-primary btn-sm">Tìm Kiếm</button>
+                                            @(Html.ActionLink("Bỏ lọc", "Index", null, new { @class = "btn btn-sm btn-warning" }))
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                        }
+
+                    </div>
+
+                    <div class="col-md-6 m-b-sm">
+
+                    </div>
+                </div>
+                <!--Phan hien thi noi dung-->
+                <table id="tblsuppliers" class="table table-responsive table-bordered table-hover">
+                    <tr>
+                        <td>@Html.CheckBox("actived", false, new { id = "actived" })</td>
+                        <th>Tên công ty</th>
+                        <th width="20%" class="hidden-sm hidden-xs">Thông tin liên hệ</th>
+                        <th width="30%" class="hidden-sm hidden-xs">Thông tin Khác</th>
+                        <th>Trạng thái</th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.CheckBox("actived", false, new { @class = "actived",supplierId = item.SupplierId })</td>
+                            <td>
+                                <strong>@Html.DisplayFor(modelItem => item.Name)</strong><br />
+                                <small>@Html.DisplayFor(modelItem => item.Description)</small>
+                            </td>
+                            <td class="hidden-sm hidden-xs">
+                                Họ tên: @Html.DisplayFor(modelItem => item.ContactName)<br />
+                                <small>Chức vụ: @Html.DisplayFor(modelItem => item.ContactTitle)</small>
+                            </td>
+                            <td class="hidden-sm hidden-xs">
+                                Địa chỉ: @Html.DisplayFor(modelItem => item.Address)<br />
+                                Email: @Html.DisplayFor(modelItem => item.Email)<br />
+                                Điện thoai: @Html.DisplayFor(modelItem => item.Phone)<br />
+                                Fax: @Html.DisplayFor(modelItem => item.Fax)<br />
+                                Website: @Html.DisplayFor(modelItem => item.HomePage)
+                            </td>
+                            <td class="td_toggle">
+                                <button type="button"
+                                        class="toggle @(item.Actived.ToString().ToLower())"
+                                        data-toggle-state="true" data-url="@Url.Action("UpdateToggle")"
+                                        data-args="Actived_@(item.Actived.ToString().ToLower())_@(item.SupplierId)"></button>
+                            </td>
+
+                            <td>
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "Edit")
+                                      .RouteValues(new { id = item.SupplierId })
+                                      .Title("Cập nhật")
+                                  .AppendIcon("fa fa-pencil fa-2x"))
+
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "GetSupplierId", "Product")
+                                      .Class("ajax-link")
+                                      .RouteValues(new { id = item.SupplierId })
+                                      .Title("Xem danh sách sản phẩm")
+                                  .AppendIcon("fa fa-gift fa-2x"))
+
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "Detail")
+                                      .RouteValues(new { id = item.SupplierId })
+                                      .Title("Xem chi tiết")
+                                      .AppendIcon("fa fa-info-circle fa-2x"))
+
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "Delete")
+                                      .RouteValues(new { id = item.SupplierId })
+                                      .Title("Xóa nhà cung cấp")
+                                  .AppendIcon("fa fa-times fa-2x"))
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <!--Phan hien thi phan trang-->
+                <div class="row">
+                    <div class="col-md-6 m-b-sm text-center">
+                        Hiển thị
+                        @(Html.DropDownList("PageSize", null, new { @class = "input-sm", id = "pageSelect" }))
+                        mẩu tin
+                    </div>
+
+                    <div class="col-md-6 text-center">
+                        @(Html.PagedListPager(Model, page => Url.Action("Index", new
+                          {
+                              page,
+                              pageSize = ViewBag.CurrentPageSize,
+                              Keyword = ViewBag.Keyword,
+                              status = ViewBag.status
+
+                          }), PagedListRenderOptions.ClassicPlusFirstAndLast))
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#actived').attr('Checked', false);
+            $('#tblsuppliers tr').on("click", "[data-toggle-state=true]", function(e) {
+                var $this = $(this);
+                var url = $this.attr('data-url');
+                var args = $this.attr('data-args');
+                $.post(url,
+                {
+                    "args": args
+                }, function(data) {
+                    if (data.Result) {
+                        $this.attr('data-args', data.Message);
+                        $this.toggleClass('true');
+                    } else {
+                        alert(data.Message);
+                    }
+                });
+
+            });
+            $('#pageSelect').change(function() {
+                $('#pageSize').val($(this).val().toString());
+                $('#searchSupplier').submit();
+            });
+
+            $('#status').change(function() {
+                //var value = $('#status').val();
+                $('#searchSupplier').submit();
+            });
+
+
+            //Ham thay đổi trạng thái
+            var url = "@Url.Action("UpdateToggle")";
+            $('#actived').change(function() {
+                var value = $('#actived').attr('value');
+                var checked = (value === "true");
+                $('.actived').prop('checked', checked);
+                $('#actived').attr('value', !checked);
+
+                $('button').each(function () {
+                    var currentRow = $(this);
+                    var args = currentRow.attr('data-args');
+                    $.post(url,
+                    {   
+                        "args": args
+                    }, function (data) {
+                        if (data.Result) {
+                            currentRow.attr('data-args', data.Message);
+                            currentRow.toggleClass('true');
+                        } else {
+                           console.log(data.Message);
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+}

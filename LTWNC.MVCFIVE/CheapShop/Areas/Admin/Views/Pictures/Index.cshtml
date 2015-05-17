@@ -1,0 +1,103 @@
+﻿@model PagedList.IPagedList<Picture>
+
+@{
+    ViewBag.Title = "Quản lý hình ảnh";
+}
+
+@section pluginStyles
+{
+    <link href="~/Content/PagedList.css" rel="stylesheet" />
+    <link href="~/Content/AdmGrid.css" rel="stylesheet" />
+}
+
+<!--Search form-->
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="ibox-content p-sm">
+            <div class="row">
+                <div class="col-md-12 m-b-sm">
+                    @using (Html.BeginForm("Index", "Pictures", FormMethod.Get, new { @class = "form-horizontal", role = "search", id = "searchSupplier" }))
+                    {
+                        <div class="input-group">
+                            @(Html.TextBox("Keyword", null, new
+                              {
+                                  placeholder = "Nhập từ khóa hoặc nội dung càn tìm",
+                                  @class = "input-sm form-control"
+                              }))
+                            @Html.Hidden("PageSize", null, new { id = "pageSize" })
+                            <span class="input-group-btn">
+                                <button type="submit" class="btn btn-sm btn-primary">Tìm kiếm</button>
+                                @(Html.ActionLink("Bỏ lọc", "Index", null, new { @class = "btn btn-sm btn-warning" }))
+                            </span>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div><!--Close search form-->
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Danh sách hình ảnh</h5>
+                <div class="ibox-tools">
+
+                    @(Html.Bootstrap()
+                          .ActionLink("Thêm hình mới", "Create")
+                          .Class("btn btn-primary btn-xs")
+                          .AppendIcon("fa fa-plus"))
+                </div>
+            </div>
+
+            <div class="ibox-content p-sm" id="picturestList">
+                <!--Phan hien thi noi dung-->
+                @Html.Partial("_PictureList", Model);
+            </div>
+
+            <!-- Phần hiển thị thanh phân trang-->
+            <div class="row">
+                <div class="col-md-6 m-b-sm text-center">
+                    Hiển thị
+                    @(Html.DropDownList("PageSize", null, new {@class = "input-sm", id = "pageSelect"}))
+                    mẩu tin
+                </div>
+
+                <div class="col-md-6 text-center">
+                    @(Html.PagedListPager(Model, page => Url.Action("Index", new
+                      {
+                          page,
+                          pageSize = ViewBag.CurrentPageSize,
+                      }), PagedListRenderOptions.ClassicPlusFirstAndLast))
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#picturestList tr').on("click", "[data-toggle-state=true]", function (e) {
+                var $this = $(this);
+                var url = $this.attr('data-url');
+                var args = $this.attr('data-args');
+
+                $.post(url,
+                { "args": args }, function (data) {
+                    if (data.Result) {
+                        $this.attr('data-args', data.Message);
+                        $this.toggleClass('true');
+                    } else {
+                        alert(data.Message);
+                    }
+                });
+            });
+        });
+    </script>
+}
+
+

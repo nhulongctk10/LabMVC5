@@ -1,0 +1,14 @@
+﻿@model ProductHistory
+
+
+<h2>Sản phẩm: <strong>@Model.Product.Name</strong></h2>
+<p>
+    Thao tác: <strong>@Model.HistoryAction</strong><br />
+    Ngày giờ thao tác: <small>@Model.ActionTime</small><br />
+    User thao tác: <strong>@Model.Account.UserName</strong>
+</p>
+<a href="#" class="btn btn-sm btn-primary"> Chi tiết</a>
+<span class="vertical-date">
+    Giờ hiện tại:<br>
+    <small>@DateTime.Now</small>
+</span>

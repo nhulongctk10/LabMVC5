@@ -1,0 +1,43 @@
+﻿@model Picture
+
+<tr>
+    <td>@Html.CheckBox("actived", false, new { @class = "actived", supplierId = Model.PictureId })</td>
+    <td>
+        <strong>@Html.DisplayFor(model => model.Caption)</strong><br/>
+    </td>
+    <td class="hidden-sm hidden-xs">
+        <a href="@Url.Action("Details", new {id = Model.PictureId})" title="Xem chi tiết">
+            <img src="@Url.Content(Model.Path)" alt="@Model.Caption" width="100" />
+        </a>
+    </td>
+    <td class="hidden-sm hidden-xs">
+        @Html.DisplayFor(model => model.OrderNo)
+    </td>
+    <td class="td_toggle">
+        <button type="button"
+                class="toggle @(Model.Actived.ToString().ToLower())"
+                data-toggle-state="true" data-url="@Url.Action("UpdateToggle")"
+                data-args="Actived_@(Model.Actived.ToString().ToLower())_@(Model.PictureId)"></button>
+    </td>
+
+    <td>
+        @(Html.Bootstrap()
+                                      .ActionLink("", "Edit")
+                                              .RouteValues(new { id = Model.PictureId })
+                                      .Title("Cập nhật")
+                                  .AppendIcon("fa fa-pencil fa-2x"))
+
+        @(Html.Bootstrap()
+                                      .ActionLink("", "Details")
+                                              .RouteValues(new { id = Model.PictureId })
+                                      .Title("Xem chi tiết")
+                                      .AppendIcon("fa fa-info-circle fa-2x"))
+
+        @(Html.Bootstrap()
+                                      .ActionLink("", "Delete")
+                                              .RouteValues(new { id = Model.PictureId })
+                                      .Title("Xóa hình")
+                                  .AppendIcon("fa fa-times fa-2x"))
+    </td>
+</tr>
+

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Cheapdeal</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/admstyle")
+    @Styles.Render("~/Content/admbootstrap")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body id="page-top">
+
+    @Html.Partial("_NavbarHeaderPartial");
+
+    @Html.Partial("_SliderPartial");
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+    </div>
+
+    @Html.Partial("_FooterPartial");
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/mainjs")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

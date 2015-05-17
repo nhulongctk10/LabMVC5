@@ -1,0 +1,219 @@
+﻿
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="sidebar-collapes">
+        <ul id="side-menu" class="nav">
+            <li class="nav-header">
+                @Html.Partial("_ProfilePartial")
+            </li>
+
+            <li>
+                <a href="@Url.Action("Index","Dashboard")">
+                    <i class="fa fa-th-large"></i>
+                    <span class="nav-label">Trang chủ</span>
+                </a>
+            </li>
+
+            <!--Thêm menu chức năng vào đây-->
+            <!--Các chức năng liên quan tới  loại mặt hàng-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-sitemap"></i>
+                    <span class="nav-label">Loại mặt hàng</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem danh mục","Index","Category")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Tạo danh mục mới", "Create", "Category")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thống kê SL hàng", "Statistic", "Category")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới loại mặt hàng-->
+
+            <!--Các chức năng liên quan tới  nhà cung cấp-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-university"></i>
+                    <span class="nav-label">Nhà cung cấp</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem danh sách", "Index", "Supplier")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thêm NCC mới", "Create", "Supplier")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới nhà cung cấp-->
+
+            <!--Các chức năng liên quan tới  sản phẩm-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-gift"></i>
+                    <span class="nav-label">Quản lý sản phẩm</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem danh sách", "Index", "Product")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thêm SP mới", "Create", "Product")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Nhập thêm hàng", "Import", "Product")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Sản phẩm hết hàng", "OutOfStock", "Product")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Lịch sử sản phẩm", "Index", "ProductHistories")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới sản phẩm-->
+
+            <!--Các chức năng liên quan tới  đặt hàng-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-shopping-cart"></i>
+                    <span class="nav-label">Đơn đặt hàng</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem đơn hàng mới", "Index", "Order")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đơn hàng chưa giao", "Unship", "Order")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đơn hàng đang giao", "Shipping", "Order")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thống kê", "OverView", "Order")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới đặt hàng-->
+
+            <!--Các chức năng liên quan tới  giao hàng-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-ship"></i>
+                    <span class="nav-label">Quản lý giao hàng</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem danh sách", "Index", "Shipper")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đơn hàng đang giao", "Index", "Shipper")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đơn hàng giao bị lỗi", "Index", "Shipper")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới giao hàng-->
+
+            <!--Các chức năng liên quan tới  quản hình anh-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-picture-o"></i>
+                    <span class="nav-label">Quản lý hình ảnh</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Thêm hình mới", "Index", "Pictures")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Xem danh sách hình", "Unship", "Pictures")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới quản lý hình ảnh-->
+
+            <!--Các chức năng liên quan tới  quản bình luận-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-comments-o"></i>
+                    <span class="nav-label">Quản lý bình luận</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem bình luận mới", "Index", "Comments")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chờ duyệt", "Unship", "Comments")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Spams", "Shipping", "Comments")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên quan tới quản lý bình luận-->
+
+            <!--Các chức năng liên quan tới  quản lý lịch sử-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-history"></i>
+                    <span class="nav-label">Quản lý lịch sử</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem lịch sử", "Index", "ProductHistories")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Chờ duyệt", "Unship", "ProductHistories")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Spams", "Shipping", "ProductHistories")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới quản lý bình luận-->
+
+            <!--Các chức năng liên quan tới  quản người dùng-->
+            <li>
+                <a href="#">
+                    <i class="fa fa-users"></i>
+                    <span class="nav-label">Quản lý người dùng</span>
+                    <span class="fa arrow"></span>
+                </a>
+
+                <ul class="nav nav-second-level">
+                    <li>
+                        @Html.ActionLink("Xem danh sách người dùng", "Index", "Account")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Thêm người dùng mới", "Unship", "Account")
+                    </li>
+                    <li>
+                        @Html.ActionLink("Danh sách blocked", "Shipping", "Account")
+                    </li>
+                </ul>
+            </li>
+            <!--Hết chức năng liên  quan tới quản lý người dùng-->
+        </ul>
+    </div>
+</nav>

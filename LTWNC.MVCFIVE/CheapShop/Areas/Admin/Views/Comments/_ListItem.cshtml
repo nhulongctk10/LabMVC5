@@ -1,0 +1,36 @@
+﻿@model Comment
+
+<div class="feed-element" id="@Model.CommentId">
+    <a href="#" class="pull-left">
+        <img alt="image" class="img-circle" src="@Url.Content(Model.Product.Thumbnail)">
+    </a>
+    <div class="media-body">
+        <h3 class="@Model.CommentId">@Model.Subject</h3>
+        <small class="pull-right text-navy">ngày gửi: @Model.PostedTime</small><br />
+        <div class="@Model.CommentId">
+            <strong>@Model.Content</strong><br />
+        </div>
+
+        <small class="text-muted">Today: @DateTime.Now</small>
+        <div class="actions">
+            <a class="btn btn-xs btn-white"><i class="fa fa-thumbs-up"></i> Thích </a>
+            <a class="btn btn-xs btn-danger"><i class="fa fa-heart"></i> Love</a>
+            <a class="btn btn-xs btn-info btnXoa" data-id="@Model.CommentId"><i class="fa fa-remove"></i> Xóa</a>
+
+            <!--Nếu chưa có nhân viên trả lời thì hiện nút trả lời-->
+            @if (Model.Replier != null)
+            {
+                <div class="media-body ">
+                    <small class="pull-right text-navy">ngày trả lời: @Model.ReplyTime</small><br />
+                    <strong class="@Model.CommentId">@Model.ReplyContent</strong>. <br>
+                    <a class="btn btn-xs btn-info" id="@Model.CommentId" data-target="#myModal" data-toggle="modal" data-url="@Model.ProductId"><i class="fa fa-reply"></i> Sửa trả lời</a>
+                </div>
+            }
+            else
+            {
+                <strong class="@Model.CommentId" type="hidden"></strong>
+                <a class="btn btn-xs btn-info" id="@Model.CommentId" data-target="#myModal" data-toggle="modal" data-url="@Model.ProductId"><i class="fa fa-edit"></i> Trả lời</a>
+            }
+        </div>
+    </div>
+</div>

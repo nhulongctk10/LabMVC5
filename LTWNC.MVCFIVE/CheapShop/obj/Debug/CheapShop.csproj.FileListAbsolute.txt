@@ -1,0 +1,271 @@
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll.config
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.pdb
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\BouncyCastle.Crypto.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Owin.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Portable.Licensing.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\T4MVCExtensions.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\TwitterBootstrapMVC5.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\WebGrease.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.pdb
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.xml
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.dll
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.pdb
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csprojResolveAssemblyReference.cache
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll.config
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.pdb
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\BouncyCastle.Crypto.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Owin.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Portable.Licensing.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\T4MVCExtensions.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\TwitterBootstrapMVC5.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\WebGrease.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.pdb
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.xml
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.Initial.resources
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ModifyProductAndOrderDetail.resources
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddCommentPictureModel.resources
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddProductProfile.resources
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ChangeDatetimeType.resources
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csproj.GenerateResource.Cache
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.dll
+D:\Studing\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.pdb
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll.config
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.pdb
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\BouncyCastle.Crypto.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.Core.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Owin.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Portable.Licensing.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\T4MVCExtensions.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\TwitterBootstrapMVC5.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\WebGrease.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.Core.pdb
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.pdb
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.xml
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csprojResolveAssemblyReference.cache
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.Initial.resources
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ModifyProductAndOrderDetail.resources
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddCommentPictureModel.resources
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddProductProfile.resources
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ChangeDatetimeType.resources
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csproj.GenerateResource.Cache
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll.config
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\BouncyCastle.Crypto.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.Core.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Web.Infrastructure.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Owin.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Portable.Licensing.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\T4MVCExtensions.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\TwitterBootstrapMVC5.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\WebGrease.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\CheapShop.Core.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Antlr3.Runtime.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\EntityFramework.SqlServer.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Core.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.AspNet.Identity.Owin.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Cookies.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Facebook.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Google.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.OAuth.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Microsoft.Owin.Security.Twitter.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\Newtonsoft.Json.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\PagedList.Mvc.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Helpers.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Mvc.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Razor.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Deployment.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.WebPages.Razor.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\bin\System.Web.Optimization.xml
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csprojResolveAssemblyReference.cache
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.Initial.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ModifyProductAndOrderDetail.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddCommentPictureModel.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.AddProductProfile.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.ChangeDatetimeType.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.DAL.UpdateProductProfiles.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.Migrations.KhoiTao.resources
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.csproj.GenerateResource.Cache
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop\obj\Debug\CheapShop.pdb

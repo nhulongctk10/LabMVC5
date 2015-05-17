@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ProductHistory>
+           
+<!--Nhật ký cập nhật-->
+<div class="ibox-content">
+    <div class="vertical-container dark-timeline">
+        <div class="vertical-timeline-block">
+           
+            @foreach (var ph in Model)
+            {
+                <div class="vertical-timeline-icon navy-bg">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="vertical-timeline-content">
+                    <h2>@ph.HistoryAction</h2>
+                    <p></p>
+                    <span class="vertical-date">
+                        Ngày giờ<br>
+                        <small>@ph.ActionTime</small>
+                    </span>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

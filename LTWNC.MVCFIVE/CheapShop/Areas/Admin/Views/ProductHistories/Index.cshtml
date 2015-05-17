@@ -1,0 +1,9 @@
+﻿@model List<ProductHistory>
+
+@{
+    ViewBag.Title = "Lịch sử sản phẩm";
+}
+
+<h2>Quản lý lịch sử sản phẩm</h2>
+
+@Html.Partial("_HistoriesList",@Model)

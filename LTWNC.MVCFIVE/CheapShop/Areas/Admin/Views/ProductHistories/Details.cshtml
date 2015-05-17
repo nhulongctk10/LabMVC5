@@ -1,0 +1,74 @@
+﻿@model CheapShop.Models.ProductHistory
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>ProductHistory</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Account.Email)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Account.Email)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Product.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Product.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ActionTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ActionTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.HistoryAction)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.HistoryAction)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.OriginalProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.OriginalProduct)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.ModifiedProduct)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.ModifiedProduct)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

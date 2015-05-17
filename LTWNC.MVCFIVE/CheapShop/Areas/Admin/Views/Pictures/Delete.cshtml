@@ -1,0 +1,110 @@
+﻿@model CheapShop.Models.Picture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        Xóa hình <b>@Model.Caption</b>
+        @Html.HiddenFor(model => model.PictureId)
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>@Html.DisplayNameFor(model => model.Caption)</strong>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Caption)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>@Html.DisplayNameFor(model => model.OrderNo)</strong>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.OrderNo)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>@Html.DisplayNameFor(model => model.Path)</strong>
+        </div>
+        <div class="col-md-10">
+            @if (Model.Path != null)
+            {
+                <img src="@Url.Content(Model.Path)" width="100" />
+            }
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>@Html.DisplayNameFor(model => model.Actived)</strong>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.Actived)
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-2">
+            <strong>@Html.DisplayNameFor(model => model.ProductId)</strong>
+        </div>
+        <div class="col-md-10">
+            @Html.DisplayFor(model => model.ProductId)
+        </div>
+    </div>
+
+    <div class="panel-footer clear">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @(Html.Bootstrap()
+                      .Button().Text("Xóa")
+                      .Style(ButtonStyle.Danger)
+                      .Id("btnDelete")
+                      .PrependIcon("fa fa-times icon-4x"))
+
+                @(Html.Bootstrap()
+                      .ActionLinkButton("Trở về danh sách", "Index")
+                      .Style(ButtonStyle.Info)
+                      .Id("btnToList")
+                      .PrependIcon("fa fa-reply-all"))
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    <script type="text/javascript">
+        var url = "@Url.Action("Delete")";
+        $(document).ready(function() {
+            $('#btnDelete').click(function() {
+                var cf = confirm("Bạn chắc chắn muốn xóa?");
+                if (cf) {
+                    var id = $('#PictureId').attr('value');
+                    $.ajax({
+                        type: "POST",
+                        url:url,
+                        id: id,
+                        success: function (response) {
+                            if (response.success) {
+                                window.location.href = response.redirectUrl;
+                            }
+                            else
+                                alert('Không thể xóa hình này');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}

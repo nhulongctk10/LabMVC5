@@ -1,0 +1,58 @@
+﻿@model CheapShop.Models.Category
+
+@{
+    ViewBag.Title = "Quản lý danh mục các mặt hàng";
+}
+
+@section pluginStyles{
+    <script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Tạo nhóm mặt hàng mới</h5>
+            </div>
+
+            <div class="ibox-content p-sm">
+                @using (Html.BeginForm("Create", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                {
+                    @Html.AntiForgeryToken()
+                    ;
+
+                    <div class="form-horizontal">
+                        @(Html.ValidationSummary(true, "", new { @class = "text-danger" }))
+
+                        @Html.Partial("_CreateOrEdit", Model)
+                        @Html.Partial("_ToolbarPartial")
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/admjqueryval")
+    <script src="~/Scripts/plugins/iCheck/icheck.min.js"></script>
+
+    <script type="text/javascript">
+        var lastNameValue = '';
+        $(document).ready(function () {
+            $('#categoryName').on('change keyup paste mouseup', function () {
+                var cateName = $('#CategoryName').val();
+                if (cateName != lastNameValue) {
+                    $('#Alias').val(convertToUnsignChar(cateName));
+                    lastNameValue = cateName;
+                }
+            });
+
+            //Thay thế checkbox bình thường bởi checkbox đẹp hơn
+            $('.i-checks').isChecked({
+                checkboxClass: 'icheckbox_square-green'
+            });
+        });
+    </script>
+}

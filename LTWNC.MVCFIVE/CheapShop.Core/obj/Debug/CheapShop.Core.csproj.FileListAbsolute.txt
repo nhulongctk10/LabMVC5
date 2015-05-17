@@ -1,0 +1,8 @@
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\bin\Debug\CheapShop.Core.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\bin\Debug\CheapShop.Core.pdb
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\obj\Debug\CheapShop.Core.dll
+D:\Studies\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\obj\Debug\CheapShop.Core.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\bin\Debug\CheapShop.Core.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\bin\Debug\CheapShop.Core.pdb
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\obj\Debug\CheapShop.Core.dll
+D:\Subject\Web Nâng Cao\Source\LTWNC.MVCFIVE\CheapShop.Core\obj\Debug\CheapShop.Core.pdb

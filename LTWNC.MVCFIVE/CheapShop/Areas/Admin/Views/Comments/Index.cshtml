@@ -1,0 +1,9 @@
+﻿@model PagedList.IPagedList<Comment>
+
+@{
+    ViewBag.Title = "Quản lý comments";
+}
+
+<h2>Trang quản lý comments</h2>
+
+@Html.Partial("_CommentList",@Model)

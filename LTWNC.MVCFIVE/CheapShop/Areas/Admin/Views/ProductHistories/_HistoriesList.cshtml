@@ -1,0 +1,19 @@
+﻿@model List<ProductHistory>
+
+<!--Nhật ký cập nhật-->
+<div class="ibox-content">
+    <div class="vertical-container dark-timeline">
+
+        @foreach (var ph in Model)
+        {
+            <div class="vertical-timeline-block">
+                <div class="vertical-timeline-icon navy-bg">
+                    <i class="fa fa-briefcase"></i>
+                </div>
+                <div class="vertical-timeline-content">
+                    @Html.Partial("_ListItem", ph)
+                </div>
+            </div>
+        }
+    </div>
+</div>

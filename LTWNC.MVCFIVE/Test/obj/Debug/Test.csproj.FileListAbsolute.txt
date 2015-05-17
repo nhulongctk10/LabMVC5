@@ -1,0 +1,6 @@
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\bin\Debug\Test.exe.config
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\bin\Debug\Test.exe
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\bin\Debug\Test.pdb
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\obj\Debug\Test.csprojResolveAssemblyReference.cache
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\obj\Debug\Test.exe
+D:\Studing\UML\CodeDemos\LTWNC.MVCFIVE\Test\obj\Debug\Test.pdb

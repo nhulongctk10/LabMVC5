@@ -1,0 +1,24 @@
+﻿@model ProductProfile
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Mã SP</th>
+            <th>Lượt xem</th>
+            <th>Số lượt bình chọn</th>
+            <th>Tổng điểm</th>
+            <th>Đã bán</th>
+            <th>Điểm đánh giá TB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.ProductId</td>
+            <td>@Model.ViewCount</td>
+            <td>@Model.VoteCount</td>
+            <td>@Model.TotalScore</td>
+            <td>@Model.Sales</td>
+            <td>@Model.AvgScore</td>
+        </tr>
+    </tbody>
+</table>

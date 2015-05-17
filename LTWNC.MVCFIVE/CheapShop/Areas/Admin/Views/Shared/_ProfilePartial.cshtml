@@ -1,0 +1,35 @@
+﻿
+<div class="dropdown profile-element">
+    <span>
+        <img class="img-circle" src="~/Images/profile_sm.jpg" alt="Ho va ten" />
+    </span>
+
+    <a  data-toggle="dropdown" class="dropdown-toggle" href="@Url.Action("Profile","Account")">
+        <span class="clear">
+            <span class="block m-t-xs">
+                <strong>Trần Như Long</strong>
+            </span>
+            <span class="text-muted text-t-xs block">
+                Quản trị hệ thống
+                <b class="caret"></b>
+            </span>
+        </span>
+    </a>
+
+    <ul class="dropdown-menu animated fadeInRight m-t-xs">
+        <li>
+            @Html.ActionLink("Xem Profile","Profile","Account")
+        </li>
+        <li>
+            @Html.ActionLink("Đổi mật khẩu", "ChangePW", "Account")
+        </li>
+        <li>
+            @Html.ActionLink("Xem tin nhắn", "Inbox", "Account")
+        </li>
+        <li class="divider"></li>
+        <li>
+            <a href="javascript:document.getElementByiId('logoutForm').submit()">Đăng xuất</a>
+        </li>
+    </ul>
+</div>
+<div class="logo-element">CDS</div>

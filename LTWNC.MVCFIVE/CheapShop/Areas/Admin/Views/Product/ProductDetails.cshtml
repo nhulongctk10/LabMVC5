@@ -1,0 +1,199 @@
+﻿@using PagedList
+@model CheapShop.Areas.Admin.Models.ProductDetailsViewModel
+
+@{
+    ViewBag.Title = "Trang hiển thị chi tiết sản phẩm";
+}
+
+@section pluginStyles
+{
+    <link href="~/Content/AdmGrid.css" rel="stylesheet" />
+}
+
+<h2>
+    Chi tiết sản phẩm <b>@Model.Product.Name</b>
+</h2>
+
+<ul class="nav nav-tabs">
+    <li class="active" id="1">
+        <a aria-expanded="true" data-toggle="tab" href="#tab-1">
+            <i class="fa fa-info-circle"></i> Thông tin SP
+        </a>
+    </li>
+    <li class="" id="2">
+        <a aria-expanded="false" data-toggle="tab" href="#tab-2">
+            <i class="fa fa-comments"></i> Bình luận
+        </a>
+    </li>
+    <li class="" id="3">
+        <a aria-expanded="false" data-toggle="tab" href="#tab-3">
+            <i class="fa fa-picture-o"> </i>Hình ảnh
+        </a>
+    </li>
+    <li class="" id="4">
+        <a aria-expanded="false" data-toggle="tab" href="#tab-4">
+            <i class="fa fa-bar-chart-o"></i> Thống kê
+        </a>
+    </li>
+    <li class="" id="5">
+        <a aria-expanded="false" data-toggle="tab" href="#tab-5">
+            <i class="fa fa-history"></i> Nhật ký cập nhật
+        </a>
+    </li>
+</ul>
+
+<div class="ibox-content">
+    <div class="tab-content">
+        <div class="tab-pane active" id="tab-1">
+            <!--Tab Thông tin SP-->
+            @Html.Partial("_ItemsProductPartial", @Model.Product)
+        </div>
+
+        <div class="tab-pane " id="tab-2">
+            <!--Tab Bình luân-->
+            @Html.Action("ProductComment", "Comments", new { @productId = @Model.Product.ProductId })
+        </div>
+
+        <div id="tab-3" class="tab-pane center-block">
+
+            <div id="imageList">
+                <!--Tab hình ảnh-->
+                <!--Lấy hình ảnh theo productId trong controller Pictuers-->
+                @Html.Action("ProductImage", "Product", new {@productId = @Model.Product.ProductId})
+            </div>
+
+            <!--Form thêm hình ảnh-->
+            @Html.Action("InsertProductImage", "Product", new { @productId = @Model.Product.ProductId })
+
+        </div>
+
+        <div id="tab-4" class="tab-pane">
+            <!--Tab Profile-->
+            @if (Model.ProductProfile != null)
+            {
+                @Html.Partial("_ProductProfilePartial", @Model.ProductProfile)
+            }
+        </div>
+        <div id="tab-5" class="tab-pane">
+
+            <!--Tab History-->
+            @Html.Partial("_HistoryPartial", @Model.ProductHistory)
+        </div>
+    </div>
+</div>
+
+@section scripts
+{
+    <script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var $replyContent, $edit, $id, $productId;
+
+            $('[data-toggle="modal"]').each(function() {
+                var $this = $(this);
+                $this.click(function() {
+                    $id = $this.attr('id');
+                    var $content = $("div." + $id).text();
+                    var $subject = $("h3." + $id).text();
+                    $productId = $this.attr('data-url');
+
+                    $('h4#popupTitle').text($subject);
+                    $('div#popupContent > p').text($content);
+
+                    $replyContent = $('strong.' + $id).text();
+                    $('#popupReply').text($replyContent);
+                });
+            });
+
+            $('#btnSave').click(function() {
+                var $txtReply = $('#popupReply').val();
+
+                $.post("/Admin/Comments/AddOrUpdate", {
+                    productId: $productId,
+                    cmdId: $id,
+                    value: $txtReply
+                }, function(result) {
+                    if (result) {
+                        if (!$edit == "1") {
+                            $('strong.' + $id).remove('type');
+                        }
+
+                        $('strong.' + $id).text("");
+
+                        $('strong.' + $id).append("<div class=" + "media-body" + "><small class=" + "pull-right text-navy>" + "</small><br/>" + $txtReply + "</div>");
+                    }
+                });
+            });
+
+            $('.btnXoa').click(function() {
+                var $this = $(this);
+                var $id = $this.data('id');
+                var cf = confirm("Bạn chắc chắn muốn xóa bình luận này?");
+
+                if (cf) {
+                    $.post("/Admin/Comments/Delete", {
+                        id: $id
+                    }, function(result) {
+                        if (result) {
+                            $('div#' + $id).remove();
+                        }
+                    });
+                }
+            });
+
+            $('div#@ViewBag.CurrentTab').attr('class', "active");
+
+            // Lưu tab đang active
+            $('[data-toggle="tab"]').on('click', function () {
+                var $li = $(this).parent().first();
+               
+            });
+
+            $('#addImageForm').on('submit', (function (e) {
+                e.preventDefault();
+                var formData = new FormData(this);
+
+                $.ajax({
+                    type: 'POST',
+                    url: $(this).attr('action'),
+                    data: formData,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    success: function (data) {
+                        $("#imageList").html(data);
+                    },
+                    error: function (data) {
+                        console.log("error");
+                        console.log(data);
+                    }
+                });
+            }));
+
+        });
+
+        // Thay đổi trạng thái (kích hoạt)
+        $('tr').on("click", "[data-toggle-state=true]", function (e) {
+            var $this = $(this);
+            var url = $this.attr('data-url');
+            var args = $this.attr('data-args');
+
+            $.post(url,
+            { "args": args }, function (data) {
+                if (data.Result) {
+                    $this.attr('data-args', data.Message);
+                    $this.toggleClass('true');
+                } else {
+                    alert(data.Message);
+                }
+            });
+        });
+
+        // Hiển thị thông báo khi thêm hình thành công(Form thêm hình sản phẩm)
+        function InsertImage() {
+            alert('Thêm thành công!');
+            //window.load.reload();
+        }
+    </script>
+}

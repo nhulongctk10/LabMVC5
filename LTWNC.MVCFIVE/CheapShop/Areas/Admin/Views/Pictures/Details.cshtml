@@ -1,0 +1,91 @@
+﻿@model CheapShop.Models.Picture
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <b>@Model.Caption</b>
+    </div>
+    <ul class="list-group">
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>
+                    @Html.DisplayNameFor(model => model.Product.Name)
+                </strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Product.Name)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>
+                    @Html.DisplayNameFor(model => model.Caption)
+                </strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Caption)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>
+                    @Html.DisplayNameFor(model => model.Path)
+                </strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Path)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>
+                    @Html.DisplayNameFor(model => model.OrderNo)
+                </strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.OrderNo)
+            </div>
+        </li>
+
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>
+                    @Html.DisplayNameFor(model => model.Actived)
+                </strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Actived)
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div class="panel-footer clear">
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+
+            @(Html.Bootstrap()
+                      .ActionLinkButton("Xóa", "Delete")
+                      .Style(ButtonStyle.Danger)
+                      .RouteValues(new { id = @Model.PictureId })
+                  .PrependIcon("fa fa-times icon-4x"))
+
+            @(Html.Bootstrap()
+                      .ActionLinkButton("Cập nhật", "Edit")
+                      .Style(ButtonStyle.Primary)
+                      .RouteValues(new { id = @Model.PictureId })
+                      .PrependIcon("fa fa-pencil icon-4x"))
+
+            @(Html.Bootstrap()
+                      .ActionLinkButton("Trở về danh sách", "Index")
+                      .Style(ButtonStyle.Info)
+                      .Id("btnToList")
+                      .PrependIcon("fa fa-reply-all"))
+        </div>
+    </div>
+</div>

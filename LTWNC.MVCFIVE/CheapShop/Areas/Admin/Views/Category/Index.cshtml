@@ -1,0 +1,201 @@
+﻿@model IEnumerable<Category>
+
+@{
+    ViewBag.Title = "Quản lý nhóm mặt hàng";
+}
+
+@section pluginStyles{
+    <link href="~/Content/AdmGrid.css" rel="stylesheet" />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Danh sách nhóm mặt hàng</h5>
+                <div class="ibox-tools">
+                    @(Html.Bootstrap()
+                          .ActionLink("Xem dạng phân cấp", "List")
+                          .Class("btn btn-primary btn-xs")
+                          .PrependIcon("fa fa-indent"))
+
+                    @(Html.Bootstrap()
+                          .ActionLink("Thêm nhóm hàng mới", "Create")
+                          .Class("btn btn-primary btn-xs")
+                          .PrependIcon("fa fa-flus"))
+                </div>
+            </div>
+
+            <div class="ibox-content p-sm">
+                <table id="tblcategories" class="table table-responsive table-bordered table-hover table-striped">
+                    <tr>
+                        <th class="hidden-xs">
+                            @Html.DisplayNameFor(model => model.ParentId)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Name)
+                        </th>
+                        <th class="hidden-xs">
+                            @Html.DisplayNameFor(model => model.Alias)
+                        </th>
+                        <th class="hidden-xs">
+                            @Html.DisplayNameFor(model => model.Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.IconPath)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Actived)
+                        </th>
+                        <th class="hidden-xs">
+                            @Html.DisplayNameFor(model => model.OrderNo)
+                        </th>
+                        <th></th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr id="@(item.CategoryId)">
+                            <td class="hidden-xs">
+                                @Html.DisplayFor(modelItem => item.Parent.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td class="hidden-xs">
+                                @Html.DisplayFor(modelItem => item.Alias)
+                            </td>
+                            <td class="hidden-xs">
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+                            <td class="text-center">
+                                @if (!string.IsNullOrEmpty(item.IconPath))
+                                {
+                                    <img src="@Url.Content(item.IconPath)" alt="@item.IconPath" />
+                                }
+                            </td>
+
+                            <td class="td_toggle">
+                                <button type="button" class="toggle @(item.Actived.ToString().ToLower())"
+                                        data-toggle-state="true"
+                                        data-url="@Url.Action("UpdateToggle")"
+                                        data-args="Actived_@(item.Actived.ToString().ToLower())_@(item.CategoryId)"></button>
+                            </td>
+                            <td class="hidden-xs">
+                                @if (item.ParentId != null)
+                                {
+                                    <div class="sort" data-args="@(item.CategoryId)_@(item.ParentId)_@(item.OrderNo)_@(Model.Count(x=>x.ParentId==item.ParentId))">
+                                        <a id="up" class="hide">
+                                            <i class="fa fa-caret-up fa-4x" id="@(item.CategoryId)"></i>
+                                        </a>
+                                        <a id="down" class="hide">
+                                            <i class="fa fa-caret-down fa-4x" id="@(item.CategoryId)"></i>
+                                        </a>
+
+                                    </div>
+                                }
+                            </td>
+                            <td>
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "Edit")
+                                      .RouteValues(new { id = item.CategoryId })
+                                      .Title("Cập nhật")
+                                      .AppendIcon("fa fa-pencil fa-2x"))
+
+                                @(Html.Bootstrap()
+                                      .ActionLink("", "InCate", "Product")
+                                      .Class("ajax-link")
+                                   .RouteValues(new { id = item.CategoryId })
+                                      .Title("Xem danh sách sản phẩm")
+                                      .AppendIcon("fa fa-gift fa-2x"))
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#tblcategories tr').on("click", "[data-toggle-state=true]", function (e) {
+                var $this = $(this);
+                var url = $this.attr('data-url');
+                var args = $this.attr('data-args');
+                $.post(url,
+                {
+                    "args": args
+                }, function (data) {
+                    if (data.Result) {
+                        $this.attr('data-args', data.Message);
+                        $this.toggleClass('true');
+                    } else {
+                        alert(data.Message);
+                    }
+                });
+            });
+
+            //Hiển thị mũi tên sắp xếp
+            $('.sort').each(function () {
+                $this = $(this);
+                var args = $this.attr('data-args');
+                var vl = args.split("_");
+                var orderNo = vl[2];
+                var total = vl[3];
+
+                if (orderNo == 1 && orderNo < total) {
+                    $this.children('#down').attr('class', "show");
+                }
+                else {
+                    if (orderNo == total && orderNo > 1) {
+                        $this.children('#up').attr('class', "show");
+                    }
+                    else {
+                        if (total != 1) {
+                            $this.children('#up').attr('class', "show");
+                            $this.children('#down').attr('class', "show");
+                        }
+                    }
+                }
+            });
+
+            //Xữ lý khi click mũi tên
+            var url = "@(Url.Action("UpdateOrderNo"))";
+            $('.show').click(function () {
+                $this = $(this);
+                var method = $this.attr('id');
+                var cid = $this.children('i').attr('id');
+
+                $.post(url,
+                    {
+                    cid: cid,
+                    method: method
+                    }, function (data) {
+                        if (data) {
+                            location.reload();
+                        }
+
+                        //Làm trường hợp không load lại trang mà chỉ hoán vị 2 thẻ tr
+
+                        //var current = $this.parent().parent().parent();
+                        //var replace;
+                        //if (method == "up")
+                        //    replace = current.prev();
+                        //else
+                        //    replace = current.next();
+
+                        //var temp = current;
+                        //current = replace;
+                        //replace = temp;
+
+                        //console.log(current.context);
+                        //console.log(replace.context);
+                    });
+            });
+
+
+        });
+    </script>
+}

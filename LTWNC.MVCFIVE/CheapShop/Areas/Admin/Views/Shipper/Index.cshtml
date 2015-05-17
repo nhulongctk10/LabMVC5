@@ -1,0 +1,215 @@
+﻿@model IEnumerable<CheapShop.Models.Shipper>
+
+@{
+    ViewBag.Title = "Quản lý các đơn vị giao hàng";
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>Danh sách đơn vị chuyển hàng</h5>
+                <div class="ibox-tools">
+                    <button class="btn btn-primary" id="btnRemoveAll">Xóa mục đã chọn</button>
+
+                    @(Html.Bootstrap()
+                    .ActionLink("Thêm công ty mới", "Create")
+                    .Class("btn btn-primary btn")
+                    .PrependIcon("fa fa-plus"))
+
+                </div>
+            </div>
+
+            <div class="ibox-content p-sm">
+                <!--Phần hiển thị danh sách công ty vận chuyển-->
+                <table class="table table-striped table-bordered table-hover" id="pagedtable">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.CompanyName)
+                            </th>
+                            <th>
+                                @Html.DisplayNameFor(model => model.Phone)
+                            </th>
+                            <th class="hidden-sm hidden-xs" width="35%">
+                                @Html.DisplayNameFor(model => model.Address)
+                            </th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>
+                                    @Html.HiddenFor(modelItem=>item.ShipperId)
+                                    @Html.DisplayFor(modelItem => item.ShipperId)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.CompanyName)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.Phone)
+                                </td>
+                                <td class="hidden-sm hidden-xs">
+                                    @Html.DisplayFor(modelItem => item.Address)
+                                </td>
+                                <td>
+                                    @(Html.Bootstrap()
+                                .ActionLink("", "Edit")
+                                .RouteValues(new { id = item.ShipperId })
+                                .Title("Cập nhật")
+                                .AppendIcon("fa fa-pencil"))
+
+                                    @(Html.Bootstrap()
+                                .ActionLink("", "Delete")
+                                .Class("dz-remove")
+                                .RouteValues(new { id = item.ShipperId })
+                                .AppendIcon("fa fa-trash-o")
+                                .Title("Xóa"))
+
+                                    @(Html.Bootstrap()
+                                .ActionLink("", "GetByShipperId", "Order")
+                                .Class("ajax-link")
+                                .RouteValues(new { id = item.ShipperId })
+                                .Title("Xem đơn hàng được thuê vận chuyển")
+                                .AppendIcon("fa fa-truck"))
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+@section pluginStyles
+{
+    <link href="~/Content/plugins/dataTables/dataTables.bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/plugins/dataTables/jquery.dataTables.css" rel="stylesheet" />
+    <link href="~/Content/plugins/dataTables/dataTables.responsive.css" rel="stylesheet" />
+    <link href="~/Content/plugins/dataTables/dataTables.tableTools.min.css" rel="stylesheet" />
+}
+
+@section pluginScripts
+{
+    <script src="~/Scripts/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="~/Scripts/plugins/dataTables/dataTables.bootstrap.js"></script>
+    <script src="~/Scripts/plugins/dataTables/dataTables.responsive.js"></script>
+    <script src="~/Scripts/plugins/dataTables/dataTables.tableTools.min.js"></script>
+}
+
+@section scripts
+ {
+    <script type="text/javascript">
+        $(document).ready(
+            function () {
+                var pagedTable = $('#pagedtable').dataTable({
+                    responsive: true,
+                    "order": [[1, 'asc']],
+                    "language": {
+                        "paginate": {
+                            "first": "Đầu",
+                            "previous": "Trước",
+                            "next": "Tiếp",
+                            "last": "Cuối"
+                        },
+                        "info": "Hiển thị _START_ đến _END_ trong số _TOTAL_ mẫu tin",
+                        "search": "Tìm theo từ khóa: ",
+                        "lengthMenu": "Hiển thị _MENU_ mẫu tin"
+                    },
+                    "dom": 'T<"clear">lfrtip',
+                    "tableTools": {
+                        "sSwfPath": "/Scripts/plugins/dataTables/swf/copy_csv_xls_pdf.swf"
+                    }
+                });
+
+                $('#pagedtable tbody').on('click', 'a.dz-remove', function (e) {
+                    e.preventDefault();
+                    var that = $(this);
+                    var confirmResult = confirm("Bạn có thực sự muốn xóa công ty này ko?");
+                    if (confirmResult) {
+                        $.ajax({
+                            type: "POST",
+                            url: that.attr('href'),
+                            success: function (response) {
+                                if (response) {
+                                    var row = that.closest('tr').get(0);
+                                    pagedTable.fnDeleteRow(row);
+                                }
+                                else
+                                    alert('Không thể xóa nhà vận chuyển này');
+                            },
+                            error: function (xhr, ajaxOptions, thrownError) {
+                                alert(xhr.responseText);
+                            }
+                        });
+
+
+                    }
+                });
+
+                $('#pagedtable tbody').on('click', 'tr', function () {
+                    $(this).toggleClass('selected');
+                });
+
+                var url = "@Url.Action("Delete")";      //Shipper/Delete
+                $('#btnRemoveAll').click(function () {
+                    var table = $('#pagedtable').DataTable();
+                    var selected = table.rows('.selected').data().length;
+                    var confirmResult = confirm("Bạn có thực sự muốn xóa " + selected + " dòng này không?");
+
+                    if (confirmResult) {
+                        $('#pagedtable').children('tbody').children('tr').filter('.selected')
+                        .each(function () {
+                            var row = $(this);
+                            var ID = row.find('input[type="hidden"]').val();
+                            $.post(url, { ID: ID }, function () {
+                                row.remove();
+                            });
+
+                        });
+                    }
+                });
+            });
+    </script>
+}
+
+<style>
+    body.DTTT_Print {
+        background: #fff;
+    }
+
+    .DTTT_Print #page-wrapper {
+        margin: 0;
+        background: #fff;
+    }
+
+    button.DTTT_button, div.DTTT_button, a.DTTT_button {
+        border: 1px solid #e7eaec;
+        background: #fff;
+        color: #676a6c;
+        -webkit-box-shadow: none;
+        -ms-box-shadow: none;
+        box-shadow: none;
+        padding: 6px 8px;
+    }
+
+        button.DTTT_button:hover, div.DTTT_button:hover, a.DTTT_button:hover {
+            border: 1px solid #d2d2d2;
+            background: #fff;
+            color: #676a6c;
+            -webkit-box-shadow: none;
+            -ms-box-shadow: none;
+            box-shadow: none;
+            padding: 6px 8px;
+        }
+
+    .dataTables_filter label {
+        margin-right: 5px;
+    }
+</style>

@@ -1,0 +1,112 @@
+﻿@model CheapShop.Models.Supplier
+
+@{
+    ViewBag.Title = "Chi tiết nhà cung cấp";
+}
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading"><b>@Model.Name</b>
+    </div>
+    <div class="panel-body">
+        <p>@Html.DisplayFor(model => model.Description)</p>
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.ContactName)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.ContactName)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.ContactTitle)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.ContactTitle)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Address)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Address)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Email)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Phone)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Fax)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Fax)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.HomePage)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.HomePage)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Actived)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Actived)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.RowVersion)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.RowVersion)
+            </div>
+        </li>
+    </ul>
+    <div class="panel-footer clear">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @(Html.Bootstrap()
+                      .ActionLinkButton("Cập nhật", "Edit")
+                      .Style(ButtonStyle.Primary)
+                      .RouteValues(new {id = @Model.SupplierId})
+                      .PrependIcon("fa fa-pencil icon-4x"))
+
+                @(Html.Bootstrap()
+                      .ActionLinkButton("Xóa", "Delete")
+                      .Style(ButtonStyle.Danger)
+                      .RouteValues(new {id = @Model.SupplierId})
+                      .PrependIcon("fa fa-times icon-4x"))
+
+                @(Html.Bootstrap()
+                      .ActionLinkButton("Trở về danh sách", "Index")
+                      .Style(ButtonStyle.Info)
+                      .Id("btnToList")
+                      .PrependIcon("fa fa-reply-all"))
+            </div>
+        </div>
+    </div>
+</div>

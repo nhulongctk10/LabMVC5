@@ -1,0 +1,138 @@
+﻿@model CheapShop.Models.Supplier
+
+@{
+    ViewBag.Title = "Chi tiết nhà cung cấp";
+}
+
+<div class="panel panel-default">
+    <!-- Default panel contents -->
+    <div class="panel-heading">
+        <b>@Model.Name</b>
+    </div>
+    <div class="panel-body">
+        <p>@Html.DisplayFor(model => model.Description)</p>
+        @Html.HiddenFor(model =>model.SupplierId)
+    </div>
+
+    <ul class="list-group">
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.ContactName)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.ContactName)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.ContactTitle)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.ContactTitle)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Address)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Address)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Email)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Phone)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Phone)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Fax)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Fax)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.HomePage)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.HomePage)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.Actived)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.Actived)
+            </div>
+        </li>
+        <li class="list-group-item row">
+            <div class="col-md-3">
+                <strong>@Html.DisplayNameFor(model => model.RowVersion)</strong>
+            </div>
+            <div class="col-md-9">
+                @Html.DisplayFor(model => model.RowVersion)
+            </div>
+        </li>
+    </ul>
+    <div class="panel-footer clear">
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                @(Html.Bootstrap()
+                      .Button().Text("Xóa")
+                      .Style(ButtonStyle.Danger)
+                      .Id("btnDelete")
+                      .PrependIcon("fa fa-times icon-4x"))
+
+                @(Html.Bootstrap()
+                      .ActionLinkButton("Trở về danh sách", "Index")
+                      .Style(ButtonStyle.Info)
+                      .Id("btnToList")
+                      .PrependIcon("fa fa-reply-all"))
+            </div>
+        </div>
+    </div>
+</div>
+
+@section scripts{
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#btnDelete').click(function () {
+                var cf = confirm("Bạn có thực sự muốn xóa ?");
+                var url = "/Admin/Supplier/Delete";
+                var id = $('#SupplierId').attr('value');
+                url = url + "/" + id;
+                if (cf) {
+                    $.ajax({
+                        type: "POST",
+                        url: url,
+                        success: function (response) {
+                            if (response) {
+                                window.location.href = response.redirectUrl;
+                            }
+                            else
+                                alert('Không thể xóa nhà vận chuyển này');
+                        },
+                        error: function (xhr, ajaxOptions, thrownError) {
+                            alert(xhr.responseText);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+}
